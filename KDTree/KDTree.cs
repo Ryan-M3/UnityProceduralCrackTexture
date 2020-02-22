@@ -162,14 +162,6 @@ public class KDTree {
         return (Left == null && Right == null);
     }
 
-    //public List<Vector2> NearestNeighbors(Vector2 center, float width) {
-    //    List<Vector2> pts = new List<Vector2>();
-    //    float w = width/2;
-    //    Rect r = new Rect(center.x - w, center.y - w, width, width);
-    //    nns(r, ref pts, 0);
-    //    return pts;
-    //}
-
     /// The input rect is NOT inclusive. A point on the line is excluded.
     public List<Vector2> NearestNeighbors(Rect searchArea) {
         List<Vector2> pts = new List<Vector2>();

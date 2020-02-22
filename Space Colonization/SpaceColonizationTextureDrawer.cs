@@ -22,6 +22,12 @@ public class SpaceColonizationTextureDrawer : MonoBehaviour
     private List<Vector2> startingVein = new List<Vector2>();
 
     void Start() {
+        if (drawOnStart) {
+            Generate();
+        }
+    }
+
+    public void Generate() {
         texture = new Texture2D(width, height, TextureFormat.Alpha8, false);
         Color[] cs = new Color[width * height];
         for (int i = 0; i < width * height; i++) {
@@ -38,12 +44,6 @@ public class SpaceColonizationTextureDrawer : MonoBehaviour
             new Vector2(width/2 - 1, height/2 + 1),
             new Vector2(width/2 - 1, height/2 - 1),
         };
-        if (drawOnStart) {
-            Generate();
-        }
-    }
-
-    public void Generate() {
         colony = new SpaceColonization(
             searchRadius,
             growDist,
@@ -83,6 +83,7 @@ public class SpaceColonizationTextureDrawer : MonoBehaviour
         }
     }
 
+    // Draws a line as an asynchronous process.
     IEnumerator DrawThread(List<Vector2> startingVein, KDTree auxins, List<Vector2> activeNodes) {
         int i = 0;
         foreach (var vein in colony.YieldGrow(startingVein, auxins, startingVein)) {
