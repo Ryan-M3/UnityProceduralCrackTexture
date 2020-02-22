@@ -11,12 +11,12 @@ useful for building procedural lighting.
 Below is an example of the settings provided and a typical range of outputs
 provided by varing those default settings.
 
-![image](options)
-![image](cracks1)
-![image](cracks2)
-![image](cracks4)
-![image](cracks5)
-![image](cracks6)
+![image](options.PNG)
+![image](cracks1.PNG)
+![image](cracks2.PNG)
+![image](cracks4.PNG)
+![image](cracks5.PNG)
+![image](cracks6.PNG)
 
 ## How to Use
 
